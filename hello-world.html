@@ -2,12 +2,23 @@
 
 <dom-module id="hello-world">
     <template>
-        <p>Hello world!</p>
+        <style>
+            p {
+                color: red;
+            }
+        </style>
+
+        <p>Hello world and {{andWho}}!</p>
     </template>
 
     <script>
         Polymer({
-            is: 'hello-world'
+            is: 'hello-world',
+            properties: {
+                andWho: {
+                    type: String
+                }
+            }
         });
     </script>
 </dom-module>
